@@ -2,6 +2,7 @@
 layout: post
 title:  "Horizon Detection"
 date:   2017-05-05 13:50:39
+comments: true
 categories: CV
 ---
 
