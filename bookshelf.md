@@ -10,4 +10,7 @@ This is an overall list of books, I have read so far and I feel are worth readin
 * Deep Work
 * Psychology of Human Misjudgement
 * Flow
+* Surely you are joking Mr. Feynman
+* When breath becomes air
+* Creative Selection
 
