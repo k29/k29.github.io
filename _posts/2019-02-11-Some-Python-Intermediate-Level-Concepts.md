@@ -1,5 +1,7 @@
-# Python stuff
-## Non local variables 
+This post contains some intermediate level python concepts like closure, decorators, property. Came across them during Django model methods and dug in deep to understand better and this is a by product of that.
+
+
+### Non local variables 
 In python, nested functions can access variables of the enclosing scope, i.e. the outer function basically. They can be read by default but if you want to modify them then you need to use a nonlocal keyword. 
 
 The use of nonlocal keyword is like using global keyword.  `nonlocal` is used to declare that a variable inside a nested function is not local to it, meaning it lies in the outer enclosing function. If this isn’t used then a new variable is created, inside the nested function. 
@@ -24,7 +26,7 @@ outer_function()
 ## Outer function: 10
 ```
 
-## Closure 
+### Closure 
 If the enclosing function returns the nested function which uses a variable in enclosing scope, the value is remembered even when the variable goes out of scope or the function itself is removed from the current namespace. 
 
 We have a closure when:
@@ -51,7 +53,7 @@ Hello is printed, and this is the because the data gets attached to the code and
 Closure are used in decorators. 
 
 
-## *args and **kwargs
+### *args and **kwargs
 It’s a nifty way to pass in a lot of arguments. 
 
 In python, if you have a list, say `blog = ['a', 'b']` then doing `print(*blog)` is gonna give you `a b`, i.e. using a * unpacks a list and using a ** unpacks a dictionary values. (I think)
@@ -114,7 +116,7 @@ blog_posts(
 			blog_3 = 'Aww look at my cat') 
 ```
 
-## Decorators
+### Decorators
 In python, functions can be passed to other functions as arguments and these are called as higher order functions.  For instance, map, reduce, filter are few examples.
 
 So decorator function is a function, which takes in a function as an argument, adds some additional functionality to it and then executes the argument function too. 
@@ -196,7 +198,7 @@ Hello
 ******************************
 ```
 
-## Property 
+### Property 
 Using @property is just a pythonic way of using getters and setters.
 
 Usually get and set operations can be programmed implicitly like this
@@ -264,4 +266,8 @@ class Celsius:
 man = Celcius()
 man.temperature = 37 # this works along with input validation 
 ```
-#python 
+
+
+Credits: 
+* Python docs 
+* Programiz
