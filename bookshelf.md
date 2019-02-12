@@ -4,13 +4,15 @@ title: Bookshelf
 permalink: /bookshelf/
 ---
 
-This is an overall list of books, I have read so far and I feel are worth reading. I have enjoyed reading others recommendations especially [Patrick Collison](https://patrickcollison.com/bookshelf), so is just another version of that.
+This is an overall list of relevant books, I have read so far and I feel are worth reading. I have enjoyed reading others recommendations especially [Patrick Collison](https://patrickcollison.com/bookshelf), so is just another version of that.
 
-* Shoe Dog
-* Deep Work
+### 2019
 * Psychology of Human Misjudgement
-* Flow
-* Surely you are joking Mr. Feynman
-* When breath becomes air
 * Creative Selection
+* Unbearable Lightness of Being
+* Flow
 
+### Earlier Reads 
+* Shoe Dog 
+* When Breath Becomes Air
+* Surely you'are joking Mr. Feynman
