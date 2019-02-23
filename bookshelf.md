@@ -10,9 +10,12 @@ This is an overall list of relevant books, I have read so far and I feel are wor
 * Psychology of Human Misjudgement
 * Creative Selection
 * Unbearable Lightness of Being
+* A study in Scarlet
 * Flow
 
 ### Earlier Reads 
 * Shoe Dog 
 * When Breath Becomes Air
 * Surely you'are joking Mr. Feynman
+* What do you care what other people think?
+* Looking for Alaska
