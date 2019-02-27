@@ -13,6 +13,7 @@ This is an overall list of relevant books, I have read so far and I feel are wor
 * A Study in Scarlet
 * Flow
 * Anything you want
+* Shantaram
 
 ### Earlier Reads 
 * Shoe Dog 
