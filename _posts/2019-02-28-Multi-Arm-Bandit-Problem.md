@@ -41,8 +41,8 @@ In the **stationary** version, each of our actions has an *expected reward* give
 
 $$q_\star(a) = \mathbb{E}[R_t \ \mid \ A_t = a]$$
 
-We want $Q_t(a)$, our approximation of the action value, to be close to $q_\star(a)$, the **true value**.  $Q_t(a)$ is also commonly called the **$Q$ Value** for action $a$.
+We want $$Q_t(a)$$, our approximation of the action value, to be close to $$q_\star(a)$$, the **true value**.  $$Q_t(a)$$ is also commonly called the **$$Q$$ Value** for action $$a$$.
 
-One of the main ideas in the *exploration vs exploitation* is that if we want $Q$ to be close to $q$, it isn’t sufficient to take greedy (exploitative) moves all the time. In fact, with exploring – **reward is lower in the short run, during exploration, but higher in the long run because after you have discovered the better actions, you can exploit them *many times***.
+One of the main ideas in the *exploration vs exploitation* is that if we want $$Q$$ to be close to $$q$$, it isn’t sufficient to take greedy (exploitative) moves all the time. In fact, with exploring – **reward is lower in the short run, during exploration, but higher in the long run because after you have discovered the better actions, you can exploit them *many times***.
 
 Whether to explore or exploit is a very hard question, and depends in a very complex way on the precise values of estimates, uncertainties, and number of remaining steps. There are some methods to determine what is the best tradeoff, *but they usually make very limiting assumptions*, such as stationarity and prior knowledge that can be impossible to verify or are just not true in most applications.
