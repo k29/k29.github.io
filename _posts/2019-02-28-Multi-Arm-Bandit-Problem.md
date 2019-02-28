@@ -84,6 +84,7 @@ Note that the step-size parameter changes from timestep to timestep, depending o
 
 Code:
 ```
+{% highlight python %}
 class Bandit:
     def __init__(self, k, steps, e): # k: number of arms
         self.k = k
@@ -125,6 +126,7 @@ for e in e_values:
         b.e_greedy_solution(j)
     plot(b.cum_avg_reward, label=e)
     legend(loc='best')
+{% endhighlight %}
 ```
 
 The average reward follows the below curves for different values of e as mentioned in the legend:
