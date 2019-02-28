@@ -1,8 +1,9 @@
 ---
 layout: post
 title:  "Multi Arm Bandit Problem"
-date:   2019-02-28 21:32:21 +0530
-categories:RL
+date:   2019-02-28 21:32:39
+comments: true
+categories: RL
 mathjax: true
 ---
 
