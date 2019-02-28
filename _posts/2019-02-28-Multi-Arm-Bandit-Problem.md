@@ -1,3 +1,11 @@
+---
+layout: post
+title:  "Multi Arm Bandit Problem"
+date:   2019-02-28 21:32:21 +0530
+categories:RL
+mathjax: true
+---
+
 A one arm bandit machine is a simple slot machine in which you insert a coin, pull a lever and get a reward. It’s equivalent to a single step Markov decision process. 
 
 A multi arm bandit is a complicated slot machine in which there are multiple lever which a gambler can pull and each lever gives a different reward based on its probability distribution which is unknown to the gambler obviously.  The task is to identify which lever to pull in order to get a maximum reward after a given set of trials. 
