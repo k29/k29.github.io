@@ -82,7 +82,7 @@ This is a form that comes up very often in RL. Note that $[Target - OldEstimate]
 Note that the step-size parameter changes from timestep to timestep, depending on the number of times that one has chosen that action. Usually *step-size* is denoted by $$\alpha_n$$.
 
 Code:
-```
+```python
 class Bandit:
     def __init__(self, k, steps, e): # k: number of arms
         self.k = k
@@ -131,5 +131,5 @@ The average reward follows the below curves for different values of e as mention
 ![](/assets/mabp1.png)
 
 Implementation: Multi Arm Bandit Problem, [Github](https://github.com/k29/Multi-Arm-Bandit-Problem.git)
-Refrences: Barton, Sutton, Reinforcement Learning
 
+Refrences: Barton, Sutton, Reinforcement Learning
