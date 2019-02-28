@@ -130,5 +130,6 @@ for e in e_values:
 The average reward follows the below curves for different values of e as mentioned in the legend:
 ![](/assets/mabp1.png)
 
-**Implementation**: Multi Arm Bandit Problem, [Github](https://github.com/k29/Multi-Arm-Bandit-Problem.git)
+Implementation: Multi Arm Bandit Problem, [Github](https://github.com/k29/Multi-Arm-Bandit-Problem.git)
+Refrences: Barton, Sutton, Reinforcement Learning
 
