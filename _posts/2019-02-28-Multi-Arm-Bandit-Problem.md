@@ -32,17 +32,33 @@ Arm | Reward
 
 It is clear that arm 1 is better than arm 2 in this case. 
 
-There can be two types of armed bandit problems:
-* **stationary** — There is always the best answer and it never changes.
-* **non-stationary** — There is always the best answer but it could change anytime.
+Now the data we operate on can be two types:
+1.  **stationary** — There is always the best answer and it never changes.
+2. **non-stationary** — There is always the best answer but it could change anytime.
 In the real world, most of the examples encountered are non-stationary. 
 
 In the **stationary** version, each of our actions has an *expected reward* given that that action is selected, called ***action value***.
 
 $$q_\star(a) = \mathbb{E}[R_t \ \mid \ A_t = a]$$
 
-We want $$Q_t(a)$$, our approximation of the action value, to be close to $$q_\star(a)$$, the **true value**.  $$Q_t(a)$$ is also commonly called the **$$Q$$ Value** for action $$a$$.
+Since we do not know the values of $$q_\star(a)$$, we calculate our approximation of the action value as well, called $$Q_t(a)$$ and we want this value to be as close to the original as possible.   $$Q_t(a)$$ is also commonly called the $$Q$$ Value for action $$a$$.
 
-One of the main ideas in the *exploration vs exploitation* is that if we want $$Q$$ to be close to $$q$$, it isn’t sufficient to take greedy (exploitative) moves all the time. In fact, with exploring – **reward is lower in the short run, during exploration, but higher in the long run because after you have discovered the better actions, you can exploit them *many times***.
+Say we start with any arbitrary action and it yields a action value, using which we update the $$Q$$ value.  Now for the next round, we can be greedy and chose the best Q value we already have, that is exploit the values we have, or we can be in exploratory mode and choose a random action, and again update the Q value for that action.  This is one of the main ideas in reinforcement learning, whether to chose to explore or exploit and in what proportion. This has wide application as a concept also, say in lab trials, when to try new drugs or use the best drug available so far. Intuitively speaking it is obviously possible to find better or worse values when we explore. It’s like going to the same cafe which you like or go to a new one. Maybe you have a better experience and find the new best for you, or maybe it’s just a waste of money. 
 
-Whether to explore or exploit is a very hard question, and depends in a very complex way on the precise values of estimates, uncertainties, and number of remaining steps. There are some methods to determine what is the best tradeoff, *but they usually make very limiting assumptions*, such as stationarity and prior knowledge that can be impossible to verify or are just not true in most applications.
+One of the main ideas in the exploration vs exploitation is that if we want $$Q$$ to be close to $$q$$, it isn’t sufficient to take greedy (exploitative) moves all the time. In fact, with exploring – reward is lower in the short run, during exploration, but higher in the long run because after you have discovered the better actions, you can exploit them many times.
+
+Whether to explore or exploit is a very hard question, and depends in a very complex way on the precise values of estimates, uncertainties, and number of remaining steps. There are some methods to determine what is the best tradeoff, but they usually make very limiting assumptions, such as stationarity and prior knowledge that can be impossible to verify or are just not true in most applications.
+
+One of the approach of solving this problem is using Action Value methods which are basically all methods that estimate values of actions and that use these estimates to pick the agent’s next action. The true* value of an action is it’s expected/mean reward. 
+
+One natural way to estimate the value of a state is just taking the average reward obtained every time we reach that state:
+
+$$ Q_t(a) = \frac{\text{sum of rewards when action `a` taken before time t}}{\text{number of times action `a` was taken}}$$
+
+As the denominator goes to infinity, our estimate converges to the real value $q_\star(a)$. This is called the sample-average method.
+
+The simples method for selecting actions is instead the greedy approach:
+
+$$ A_t = argmax_a Q_t(a) $$
+
+A better, but still simple approach is the $$\epsilon$$-greedy approach, in which the greedy option is selected with probability $$1-\epsilon$$ and a random action (among the remaining) is selected with probability $$\epsilon$$. Thus we explore with $$\epsilon$$ probability and exploit rest of the time. 
