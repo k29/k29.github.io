@@ -63,6 +63,7 @@ $$ A_t = argmax_a Q_t(a) $$
 
 A better, but still simple approach is the $$\epsilon$$-greedy approach, in which the greedy option is selected with probability $$1-\epsilon$$ and a random action (among the remaining) is selected with probability $$\epsilon$$. Thus we explore with $$\epsilon$$ probability and exploit rest of the time. 
 
+
 **Incremental Implementation**
 
 How can these averages be computed in a computationally efficient manner?
@@ -130,3 +131,4 @@ The average reward follows the below curves for different values of e as mention
 ![](/assets/mabp1.png)
 
 **Implementation**: Multi Arm Bandit Problem, [Github](https://github.com/k29/Multi-Arm-Bandit-Problem.git)
+
