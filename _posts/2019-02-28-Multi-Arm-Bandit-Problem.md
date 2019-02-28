@@ -82,8 +82,7 @@ This is a form that comes up very often in RL. Note that $[Target - OldEstimate]
 Note that the step-size parameter changes from timestep to timestep, depending on the number of times that one has chosen that action. Usually *step-size* is denoted by $$\alpha_n$$.
 
 Code:
-```
-{% highlight python %}
+```python
 class Bandit:
     def __init__(self, k, steps, e): # k: number of arms
         self.k = k
@@ -125,7 +124,7 @@ for e in e_values:
         b.e_greedy_solution(j)
     plot(b.cum_avg_reward, label=e)
     legend(loc='best')
-{% endhighlight %}
+
 ```
 
 The average reward follows the below curves for different values of e as mentioned in the legend:
