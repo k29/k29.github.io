@@ -1,5 +1,5 @@
 ---
 layout: page
-title: Resume
+title: CV
 permalink: /Kaustubh_2019_CV.pdf
 ---
