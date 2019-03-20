@@ -1,1 +1,5 @@
-{{ site.baseurl }}/Kaustubh_2019_CV.pdf
+---
+layout: page
+title: Resume
+permalink: /Kaustubh_2019_CV.pdf/
+---
