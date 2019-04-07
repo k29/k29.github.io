@@ -22,3 +22,4 @@ This is an overall list of relevant books, I have read so far and I feel are wor
 * What do you care what other people think?
 * Looking for Alaska
 * The hard thing about hard things
+* Idea Man
