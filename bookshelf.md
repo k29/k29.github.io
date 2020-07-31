@@ -10,13 +10,15 @@ Books range from what I use at work to learn more about subjects I don't know to
 
 ### Recommended Reads
 
-* Becoming Steve Jobs
 * Good Economics for the Hard Times
 * SuperThinking
 * The Everything Store
 * Production Ready Microservices
 * Core Java
 * Patterns of Enterprise Application Architecture
+* Becoming Steve Jobs
+* Principles
+* The Rise and Fall of Nations
 * Psychology of Human Misjudgement
 * Creative Selection
 * Unbearable Lightness of Being
