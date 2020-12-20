@@ -33,7 +33,6 @@ You can implement `Module` or extend `AbstractModule` to tell Guice which implem
 ```java
 
 // BillingService.java
-
 public class BillingService {
     private final CreditCardProcessor processor;
     private final TransactionLog transactionLog;
@@ -66,3 +65,36 @@ public class BillingModule extends AbstractModule {
 }  
 
 ```
+
+### Bootstrapping Guice
+To start using Guice you create an instance of `Injector`. This central Guice type takes a collected set of Module or AbstractModule subclasses.
+To create an injector use `createInjector` which is a simple static class that serves as a starting point. You can pass zero or more modules separated 
+by a comma.
+
+```java
+//Main.java
+public static void main(String[] args) {
+    Injector injector = Guice.createInjector(new BillingModule());
+    BillingService billingService = injector.getInstance(BillingService.class);
+    ...
+    billingService.chargeOrder(abc, xyz)
+    ...
+}
+```
+
+The recursive behaviour of guice allow you to use the injector somewhere high up in the stack, guice then creates an entire graph of dependencies below a requested
+object recursively.
+`createInjector` method also has an onverload that takes stage enumeration as the first parameter. Use `DEVELOPMENT` to have better error reporting, loggging, faster startup,
+at the cost of slow runtime and `PRODUCTION` for production code. 
+
+```java
+Injectior injector = Guice.createInjector(Stage.PRODUCTION, new BillingModule());
+```
+
+### Choosing between Implementations
+...
+
+
+
+
+
