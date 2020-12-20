@@ -22,11 +22,17 @@ Guice also doesn't care about targets visiblity. It will inject anything tagged 
 However, injection into private members is usually not needed and probably a bad idea. This leads to crippling the classes testability.
 Field injections are frequent offenders in this case since they are usually private members in a class. 
 
+
+### Specifying an implementation
+You can implement `Module` or extend `AbstractModule` to tell Guice which implementations to use for the dependencies of the class.
+`AbstractModule` is an abstract class (duh!) that implements `Module` itself and exposes a no-argument configure method.
+
+
 ### Example
 
 ```java
 
-// billingService.java
+// BillingService.java
 
 public class BillingService {
     private final CreditCardProcessor processor;
@@ -49,5 +55,14 @@ public class BillingService {
         }
     }
 }
+
+
+// BillingModule.java
+public class BillingModule extends AbstractModule {
+    protected void configure() {
+        bind(TransactionLog.class).to(DatabaseTransactionLogImpl.class);
+        bind(CreditCardProcessor.class).to(PaypalCreditCardProcessorImpl.class)
+    }
+}  
 
 ```
