@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [Notes] Google Guice 
+title: Learning Google Guice 
 date: 2020-12-20
 categories: Learning
 ---
